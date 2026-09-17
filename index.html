@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4ead7" />
+  <title>Lucinha — 54 anos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap');
+
+:root{--ivory:#f8f3e7;--paper:#fbf7ed;--cream:#eee1c8;--gold:#b58a3a;--gold2:#d8bb78;--darkgold:#806126;--ink:#3d3428;--muted:#756958;--shadow:rgba(57,43,24,.2)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(216,187,120,.13),transparent 28%),radial-gradient(circle at 85% 45%,rgba(181,138,58,.08),transparent 30%),var(--ivory);color:var(--ink);font-family:'Cormorant Garamond',serif;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;pointer-events:none;z-index:100}
+body:before{inset:8px;border:1px solid rgba(181,138,58,.65)}
+body:after{inset:13px;border:1px solid rgba(181,138,58,.25)}
+.screen{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center}
+#cover{color:#fff;background:linear-gradient(rgba(35,26,18,.25),rgba(35,26,18,.68)),url('assets/images/foto-capa.jpg') center/cover no-repeat;cursor:pointer}
+.cover-frame{position:absolute;inset:25px;border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 0 0 7px rgba(181,138,58,.2)}
+.cover-content{position:relative;z-index:2;text-align:center;width:min(92%,720px);padding:40px 18px}
+.cover-kicker{letter-spacing:.28em;text-transform:uppercase;font:500 10px Montserrat,sans-serif}
+.cover-name{font:clamp(78px,20vw,150px)/.9 'Great Vibes',cursive;margin:20px 0 8px;text-shadow:0 4px 22px rgba(0,0,0,.35)}
+.cover-age{font-size:clamp(26px,6vw,44px);letter-spacing:.12em}
+.cover-message{max-width:570px;margin:22px auto 34px;font-size:clamp(20px,4vw,27px);line-height:1.25}
+.start{display:inline-flex;flex-direction:column;gap:8px;align-items:center;padding:15px 26px;border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.08);backdrop-filter:blur(5px);font:10px Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.start strong{font-size:12px;letter-spacing:.18em}
+#main{display:none}
+.section{position:relative;width:min(100%,1050px);margin:auto;padding:80px 24px}
+.ornament{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--darkgold);margin:12px 0 28px}
+.ornament:before,.ornament:after{content:"";width:90px;max-width:20vw;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.ornament:after{background:linear-gradient(90deg,var(--gold),transparent)}
+.ornament span{font-size:18px}
+.section-title{text-align:center;font-size:clamp(34px,7vw,54px);font-weight:600;margin:0;color:var(--darkgold)}
+.section-subtitle{text-align:center;font:10px Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.letter-intro{text-align:center;max-width:620px;margin:0 auto 38px;font-size:clamp(19px,4vw,24px);line-height:1.4}
+.papyrus-wrap{max-width:850px;margin:auto;position:relative;filter:drop-shadow(0 18px 25px var(--shadow))}
+.papyrus{position:relative;padding:clamp(50px,9vw,90px) clamp(28px,8vw,95px);background:radial-gradient(circle at 20% 20%,rgba(181,138,58,.1),transparent 24%),radial-gradient(circle at 80% 80%,rgba(128,97,38,.1),transparent 28%),linear-gradient(90deg,#e9d7b5,#fbf1dc 9%,#f8ecd3 90%,#e3cda4);border:1px solid var(--gold);min-height:500px}
+.papyrus:before,.papyrus:after{content:"";position:absolute;left:12px;right:12px;height:18px;border:1px solid rgba(128,97,38,.45)}
+.papyrus:before{top:12px}.papyrus:after{bottom:12px}
+.papyrus-inner{border-left:1px solid rgba(128,97,38,.25);border-right:1px solid rgba(128,97,38,.25);padding:0 clamp(12px,5vw,50px)}
+.letter-heading{text-align:center;font:clamp(34px,7vw,48px) Parisienne,cursive;color:var(--darkgold);margin-bottom:28px}
+#letter{font:clamp(22px,5vw,31px)/1.65 Parisienne,cursive;color:#3e3021;white-space:pre-wrap;min-height:280px}
+#pen{position:absolute;width:64px;right:4%;top:38%;opacity:0;transform:rotate(-22deg);filter:drop-shadow(2px 4px 3px rgba(0,0,0,.25));z-index:4}
+#pen.writing{animation:penWriting 2.8s ease-in-out infinite}
+@keyframes penWriting{0%,100%{transform:translate(0,0) rotate(-22deg)}50%{transform:translate(-18px,7px) rotate(-18deg)}}
+.after-letter{text-align:center;margin-top:48px;padding:25px}
+.after-letter p{font-size:clamp(20px,4vw,27px);margin:0 0 10px}
+.scroll-cue{font:9px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.15em;color:var(--darkgold);animation:float 2s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(6px)}}
+.albums-intro{text-align:center;max-width:650px;margin:0 auto 42px;font-size:clamp(19px,4vw,24px);line-height:1.45}
+.album-list{display:grid;gap:85px}
+.album-card{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.album-card.visible{opacity:1;transform:none}
+.album-cover{position:relative;width:min(100%,500px);margin:auto;padding:12px;background:#eee4d0;border:1px solid var(--gold);box-shadow:0 20px 35px var(--shadow);cursor:pointer;transform:rotate(var(--tilt));transition:transform .4s ease,box-shadow .4s ease}
+.album-cover:hover{transform:rotate(0) translateY(-5px);box-shadow:0 26px 42px var(--shadow)}
+.album-cover:after{content:"";position:absolute;inset:7px;border:1px solid rgba(181,138,58,.4);pointer-events:none}
+.album-cover img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.album-caption{padding:17px 12px 13px;text-align:center}
+.album-caption h3{font-size:30px;margin:0 0 3px;color:var(--darkgold)}
+.album-caption p{margin:0;font:9px Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.album-count{position:absolute;right:22px;top:22px;z-index:3;background:rgba(255,250,238,.9);border:1px solid var(--gold);padding:6px 9px;font:9px Montserrat,sans-serif;letter-spacing:.08em}
+.modal{display:none;position:fixed;inset:0;background:rgba(35,28,20,.95);z-index:200;padding:25px 12px;align-items:center;justify-content:center}
+.modal.open{display:flex}
+.book{width:min(960px,100%);max-height:94svh;position:relative}
+.book-shell{position:relative;width:100%;background:#eee3ce;border:1px solid var(--gold2);padding:clamp(8px,2vw,16px);box-shadow:0 25px 60px rgba(0,0,0,.5)}
+.book-page{position:relative;overflow:hidden;background:#f8f2e6;border:1px solid rgba(128,97,38,.45);perspective:1600px;touch-action:pan-y}
+.book-photo{display:block;width:100%;height:min(76svh,720px);object-fit:contain;background:#241f19;user-select:none;-webkit-user-drag:none}
+.page-turn{position:absolute;inset:0;background:linear-gradient(90deg,#f8f0df,#d8c6a5);transform-origin:left center;transform:rotateY(0);pointer-events:none;opacity:0}
+.page-turn.next{animation:turnNext .55s ease forwards}
+.page-turn.prev{transform-origin:right center;animation:turnPrev .55s ease forwards}
+@keyframes turnNext{0%{opacity:1;transform:rotateY(0)}100%{opacity:0;transform:rotateY(-125deg)}}
+@keyframes turnPrev{0%{opacity:1;transform:rotateY(0)}100%{opacity:0;transform:rotateY(125deg)}}
+.book-ui{display:flex;justify-content:space-between;align-items:center;color:#f5ead4;padding:12px 2px 0;font:10px Montserrat,sans-serif}
+.book-ui button,.close-modal{border:1px solid rgba(216,187,120,.75);background:rgba(255,255,255,.06);color:#f8ecd6;width:40px;height:40px;border-radius:50%;cursor:pointer}
+.close-modal{position:absolute;right:-3px;top:-48px}
+.hint{text-align:center;opacity:.75;letter-spacing:.06em}
+.finish{text-align:center;padding:100px 24px 140px}
+.finish-name{font:clamp(65px,16vw,115px)/1 'Great Vibes',cursive;color:var(--darkgold)}
+.finish h2{font-size:clamp(28px,6vw,46px);margin:10px 0 18px}
+.finish p{font-size:clamp(20px,4vw,26px);max-width:650px;margin:auto}
+@media(max-width:600px){body:before{inset:6px}body:after{inset:10px}.cover-frame{inset:18px}.section{padding:65px 18px}.papyrus{padding:48px 20px}.papyrus-inner{padding:0 12px}#pen{width:48px;right:1%;top:43%}.album-list{gap:70px}.album-cover{width:94%}.book-photo{height:70svh}.book-ui{padding:10px 4px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section id="cover" class="screen" aria-label="Capa da homenagem">
+  <div class="cover-frame"></div>
+  <div class="cover-content">
+    <div class="cover-kicker">Uma homenagem feita com amor</div>
+    <div class="cover-name">Lucinha</div>
+    <div class="cover-age">54 anos</div>
+    <p class="cover-message">Hoje a história é sobre você.<br>Toque em qualquer lugar para abrir sua homenagem.</p>
+    <div class="start"><strong>Toque para começar</strong><span>↻ Ative a rotação • 🔊 Aumente o volume</span></div>
+  </div>
+</section>
+
+<main id="main">
+<section class="section" id="carta">
+  <div class="ornament"><span>✦</span></div>
+  <h1 class="section-title">Para você, Lucinha</h1>
+  <div class="section-subtitle">Uma carta para os seus 54 anos</div>
+  <p class="letter-intro">Antes das fotografias, algumas palavras que merecem ser lidas devagar.</p>
+  <div class="papyrus-wrap">
+    <div class="papyrus">
+      <img id="pen" src="assets/pen.png" alt="" aria-hidden="true">
+      <div class="papyrus-inner">
+        <div class="letter-heading">Minha querida Lucinha,</div>
+        <div id="letter"></div>
+      </div>
+    </div>
+  </div>
+  <div class="after-letter">
+    <p><strong>E isso é só o começo...</strong></p>
+    <p>Agora vêm as lembranças. Desça a página e abra cada pequeno álbum.</p>
+    <div class="scroll-cue">Role para continuar ↓</div>
+  </div>
+</section>
+
+<section class="section" id="albuns">
+  <div class="ornament"><span>❦</span></div>
+  <h2 class="section-title">Nosso álbum de memórias</h2>
+  <div class="section-subtitle">Quatro capítulos • seis fotografias em cada um</div>
+  <p class="albums-intro">Cada álbum guarda um pedacinho da sua história. Toque na capa para abri-lo e deslize pelas páginas como num álbum de verdade.</p>
+  <div class="album-list">
+    <article class="album-card" style="--tilt:-1.2deg"><div class="album-cover" data-album="0"><span class="album-count">06 fotos</span><img src="assets/images/album1-01.jpg" alt="Capa do primeiro álbum"><div class="album-caption"><h3>Capítulo I</h3><p>As primeiras lembranças</p></div></div></article>
+    <article class="album-card" style="--tilt:1deg"><div class="album-cover" data-album="1"><span class="album-count">06 fotos</span><img src="assets/images/album2-01.jpg" alt="Capa do segundo álbum"><div class="album-caption"><h3>Capítulo II</h3><p>Momentos que ficaram</p></div></div></article>
+    <article class="album-card" style="--tilt:-.8deg"><div class="album-cover" data-album="2"><span class="album-count">06 fotos</span><img src="assets/images/album3-01.jpg" alt="Capa do terceiro álbum"><div class="album-caption"><h3>Capítulo III</h3><p>Risadas e aventuras</p></div></div></article>
+    <article class="album-card" style="--tilt:1.4deg"><div class="album-cover" data-album="3"><span class="album-count">06 fotos</span><img src="assets/images/album4-01.jpg" alt="Capa do quarto álbum"><div class="album-caption"><h3>Capítulo IV</h3><p>O que ainda vamos viver</p></div></div></article>
+  </div>
+</section>
+
+<section class="finish">
+  <div class="ornament"><span>✦</span></div>
+  <div class="finish-name">Lucinha</div>
+  <h2>Feliz aniversário!</h2>
+  <p>Que os próximos capítulos sejam tão bonitos quanto todos os que já fizeram parte da sua história.</p>
+</section>
+</main>
+
+<div class="modal" id="albumModal" aria-hidden="true">
+  <div class="book">
+    <button class="close-modal" id="closeAlbum" aria-label="Fechar álbum">×</button>
+    <div class="book-shell">
+      <div class="book-page" id="bookPage">
+        <img class="book-photo" id="bookPhoto" src="" alt="Fotografia do álbum">
+        <div class="page-turn" id="pageTurn"></div>
+      </div>
+      <div class="book-ui">
+        <button id="prevPhoto" aria-label="Foto anterior">‹</button>
+        <div class="hint" id="photoCounter">1 / 6<br>deslize para virar a página</div>
+        <button id="nextPhoto" aria-label="Próxima foto">›</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const LETTER=`Hoje você completa 54 anos, e eu queria que este dia tivesse algo diferente.
+
+Não apenas uma mensagem, não apenas um presente, mas um pequeno lugar onde algumas das lembranças mais bonitas pudessem ficar guardadas.
+
+Porque existem pessoas que fazem parte da nossa história. E existem aquelas que são parte essencial dela.
+
+Você é uma dessas pessoas.
+
+Ao longo dos anos, foram tantos momentos, tantas conversas, risadas, preocupações, conquistas e histórias que seria impossível colocar tudo em uma única carta.
+
+Mas talvez seja justamente isso que torne tudo tão especial: a nossa história não cabe em poucas palavras.
+
+Hoje, eu desejo que você olhe para trás com carinho, para tudo o que viveu, e para frente com a mesma vontade de continuar escrevendo novos capítulos.
+
+Que nunca faltem motivos para sorrir, pessoas para abraçar e momentos que mereçam ser lembrados.
+
+E que você nunca se esqueça do quanto é querida.
+
+Feliz 54 anos, Lucinha.
+
+Com todo meu carinho.`;
+
+const albums=Array.from({length:4},(_,a)=>Array.from({length:6},(_,i)=>`assets/images/album${a+1}-0${i+1}.jpg`));
+const cover=document.getElementById('cover'),main=document.getElementById('main'),letterEl=document.getElementById('letter'),pen=document.getElementById('pen');
+const modal=document.getElementById('albumModal'),photo=document.getElementById('bookPhoto'),counter=document.getElementById('photoCounter'),pageTurn=document.getElementById('pageTurn');
+let albumIndex=0,photoIndex=0,started=false,audio=null,typingTimer=null;
+
+function startExperience(){
+ if(started)return; started=true;
+ cover.style.transition='opacity 1.1s ease,transform 1.1s ease';cover.style.opacity='0';cover.style.transform='scale(1.03)';
+ setTimeout(()=>{cover.style.display='none';main.style.display='block';window.scrollTo(0,0);typeLetter()},950);
+ audio=new Audio('assets/audio/musica.mp3');audio.loop=true;audio.volume=.55;audio.play().catch(()=>{});
+}
+cover.addEventListener('click',startExperience);
+
+function typeLetter(){
+ let i=0;pen.style.opacity='1';pen.classList.add('writing');
+ const speed=32;
+ typingTimer=setInterval(()=>{
+   letterEl.textContent=LETTER.slice(0,++i);
+   if(i>=LETTER.length){clearInterval(typingTimer);pen.classList.remove('writing');pen.style.opacity='.35'}
+ },speed);
+}
+
+function openAlbum(a){albumIndex=a;photoIndex=0;updatePhoto();modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+function closeAlbum(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+function updatePhoto(){photo.src=albums[albumIndex][photoIndex];photo.alt=`Fotografia ${photoIndex+1} do álbum ${albumIndex+1}`;counter.innerHTML=`${photoIndex+1} / 6<br>deslize para virar a página`}
+function turn(direction){
+ const next=photoIndex+direction;if(next<0||next>=6)return;
+ pageTurn.className='page-turn '+(direction>0?'next':'prev');
+ setTimeout(()=>{photoIndex=next;updatePhoto();pageTurn.className='page-turn'},220);
+}
+document.querySelectorAll('.album-cover').forEach(el=>el.addEventListener('click',()=>openAlbum(+el.dataset.album)));
+document.getElementById('closeAlbum').onclick=closeAlbum;
+document.getElementById('prevPhoto').onclick=()=>turn(-1);
+document.getElementById('nextPhoto').onclick=()=>turn(1);
+modal.addEventListener('click',e=>{if(e.target===modal)closeAlbum()});
+document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')closeAlbum();if(e.key==='ArrowLeft')turn(-1);if(e.key==='ArrowRight')turn(1)});
+
+let touchX=0,touchY=0;
+const bookPage=document.getElementById('bookPage');
+bookPage.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;touchY=e.changedTouches[0].clientY},{passive:true});
+bookPage.addEventListener('touchend',e=>{
+ const dx=e.changedTouches[0].clientX-touchX,dy=e.changedTouches[0].clientY-touchY;
+ if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))turn(dx<0?1:-1);
+},{passive:true});
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.15});
+document.querySelectorAll('.album-card').forEach(x=>observer.observe(x));
+</script>
+</body>
+</html>
