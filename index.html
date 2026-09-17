@@ -60,7 +60,7 @@ dialog{border:0;padding:0;background:transparent;color:var(--paper);width:min(11
 <main id="main" hidden>
 <nav class="nav" aria-label="Navegação da homenagem"><a class="nav-brand" href="#carta">Lucinha · 54</a><div class="nav-links"><a href="#carta">As cartas</a><a href="#album-1">As memórias</a></div></nav>
 <div id="chapters"></div><template id="letter-template"><section class="section" id="carta" aria-labelledby="carta-title"><header class="section-header"><div class="ornament" aria-hidden="true">❦</div><p class="eyebrow">Palavras que ficam</p><h2 class="section-title" id="carta-title" tabindex="-1">Para você, com carinho.</h2><p class="section-intro">Antes das fotografias, algumas palavras<br>que merecem ser lidas devagar.</p></header>
-<div class="papyrus" id="paper"><div id="pen" hidden aria-hidden="true"><svg viewBox="0 0 72 100"><defs><linearGradient id="feather"><stop stop-color="#b9a47a"/><stop offset=".45" stop-color="#fff8e8"/><stop offset="1" stop-color="#d5bf8a"/></linearGradient></defs><path d="M7 94C19 60 17 20 65 3C71 36 43 70 17 77Z" fill="url(#feather)" stroke="#9a8153" stroke-width=".8"/><path d="M7 94Q30 47 62 9M22 61L21 40M30 48L31 27M38 37L44 18M24 59L43 53M33 44L53 35M43 29L60 21" fill="none" stroke="#a08b65" stroke-width=".8"/><path d="M7 94L12 82" stroke="#493922" stroke-width="2"/></svg></div><p class="letter-heading">Minha querida Lucinha,</p><div id="letter" aria-hidden="true"><span class="pen-anchor" id="pen-anchor"></span></div><p class="sr-only" id="accessible-letter"></p></div>
+<div class="papyrus" id="paper"><div id="pen" hidden aria-hidden="true"><svg viewBox="0 0 72 100"><defs><linearGradient id="feather"><stop stop-color="#b9a47a"/><stop offset=".45" stop-color="#fff8e8"/><stop offset="1" stop-color="#d5bf8a"/></linearGradient></defs><path d="M7 94C19 60 17 20 65 3C71 36 43 70 17 77Z" fill="url(#feather)" stroke="#9a8153" stroke-width=".8"/><path d="M7 94Q30 47 62 9M22 61L21 40M30 48L31 27M38 37L44 18M24 59L43 53M33 44L53 35M43 29L60 21" fill="none" stroke="#a08b65" stroke-width=".8"/><path d="M7 94L12 82" stroke="#493922" stroke-width="2"/></svg></div><p class="letter-heading"></p><div id="letter" aria-hidden="true"><span class="pen-anchor" id="pen-anchor"></span></div><p class="sr-only" id="accessible-letter"></p></div>
 <div class="letter-tools"><button class="text-button" id="finish-letter">Ler a carta inteira</button><a class="text-button" href="#albuns">Ir para as memórias ↓</a></div><p class="after-letter" id="after-letter" hidden>E isso é só o começo. Ainda temos tantas lembranças para revisitar.</p></section></template>
 <footer class="finish"><div class="ornament" aria-hidden="true">❦</div><div class="finish-name">Lucinha</div><h2>Feliz aniversário, mãe.</h2><p>Que os próximos capítulos sejam tão bonitos quanto todos os que já fizeram parte da sua história.</p><small>Com todo o meu amor · 54 anos</small></footer>
 </main>
@@ -74,7 +74,7 @@ dialog{border:0;padding:0;background:transparent;color:var(--paper);width:min(11
 <script>
 'use strict';
 // CONFIGURAÇÃO: mantenha os nomes abaixo ou personalize os objetos em ALBUMS.
-const LETTER = "Hoje você completa 54 anos, e eu queria que este dia tivesse algo diferente.\n\nNão apenas uma mensagem, não apenas um presente, mas um pequeno lugar onde algumas das lembranças mais bonitas pudessem ficar guardadas.\n\nPorque existem pessoas que fazem parte da nossa história. E existem aquelas que são parte essencial dela.\n\nVocê é uma dessas pessoas.\n\nAo longo dos anos, foram tantos momentos, tantas conversas, risadas, preocupações, conquistas e histórias que seria impossível colocar tudo em uma única carta.\n\nMas talvez seja justamente isso que torne tudo tão especial: a nossa história não cabe em poucas palavras.\n\nHoje, eu desejo que você olhe para trás com carinho, para tudo o que viveu, e para frente com a mesma vontade de continuar escrevendo novos capítulos.\n\nQue nunca faltem motivos para sorrir, pessoas para abraçar e momentos que mereçam ser lembrados.\n\nE que você nunca se esqueça do quanto é querida.\n\nFeliz 54 anos, Lucinha.\n\nCom todo meu carinho.";
+const LETTER = "Uma trajetória de vida de uma mulher que inspira e cativa a todos.\n\nSeu amor contagia qualquer ambiente por onde passa.\n\nExistem pessoas que fazem parte da nossa história. E existem aquelas que são parte essencial dela.\n\nVocê é uma dessas pessoas.";
 
 const PHOTO_COUNTS = [20, 20, 20, 30];
 // Opcional: declare qualquer JPG/PNG/WebP/MP4 aqui. A chave é "álbum-página".
@@ -83,41 +83,35 @@ const PHOTO_COUNTS = [20, 20, 20, 30];
 const MEDIA_OVERRIDES = {};
 const LETTERS = [
  LETTER,
- `Mãe,
-
-Alguns momentos ficam guardados de um jeito especial. Não precisam ser grandiosos: às vezes, basta um sorriso, uma conversa ou a alegria de estarmos juntos.
-
-Neste capítulo, cada lembrança é um convite para olhar com carinho para o que já vivemos. Para perceber que o amor também mora nas pequenas coisas.
-
-Que estas páginas tragam de volta um pouco desse aconchego. E que você sinta, em cada uma delas, o quanto a sua presença é preciosa.
-
-Com amor, sempre.`,
- `Minha querida mãe,
-
-Se a felicidade pudesse ficar guardada entre as páginas de um álbum, ela teria o som das nossas risadas e a beleza dos momentos que dividimos.
-
-Há lembranças que parecem ganhar vida quando voltamos a olhar para elas. Um gesto, um abraço, uma expressão: pequenos instantes que o coração reconhece.
-
-Este capítulo é para celebrar essa alegria. Que a vida continue nos oferecendo motivos para rir juntos e histórias boas para contar.
-
-Que nunca nos faltem novos momentos assim.`,
  `Lucinha,
 
-Aos 54 anos, a sua história continua aberta para tudo o que ainda pode florescer. Há sonhos para cuidar, caminhos para descobrir e muitos dias bonitos esperando por você.
+Hoje celebramos a vida de uma mulher incrível, uma mãe, uma esposa, uma sogra, e uma amiga para todos.
 
-Estas últimas páginas são um abraço no que já vivemos e um desejo carinhoso para o que vem pela frente.
+Somos imensamente gratos pelo privilégio de compartilhar a vida com você e receber o amor que derrama por nós todos os dias.
 
-Que você tenha tempo para fazer o que ama, tranquilidade para aproveitar cada conquista e amor por perto em todos os capítulos.
+A mulher forte, generosa e destemida que é, nos orgulha a cada gesto e ação realizados.
+Te amamos e amaremos cada dia mais.
+`,
+ `Vida de alegrias, conquistas e muitos momentos para se guardar na memória. Momentos repletos de boas companhias, diversão e felicidade.`,
+ `Lucinha,
 
-Feliz aniversário, mãe. Que a gente continue colecionando lembranças, lado a lado.
+Na vida, por vezes há momentos de luta e dificuldades. Em seu último aniversário, vivíamos um desses momentos, a batalha mais difícil já travada até aqui.
 
-Com todo o meu amor.`
+Uma pedra no meio do caminho que veio para tentar nos derrubar, mas ela não contava com a força dessa mulher, que estava pronta para enfrentar qualquer coisa e VENCER. E você venceu. Nós vencemos. E perseveramos para continuar a sequência dessa bela história.
+
+A história de lucinha, a melhor mãe do mundo.
+
+Feliz aniversário para a melhor!
+Que continuemos colecionando lembranças, lado a lado!
+Com todo nosso amor,
+De seus filhos, esposo e noras (e dos netos também - amora, laranjinha, pipi, xuxu e minduim)
+`
 ];
 const ALBUMS = [
  {title:'Capítulo I',subtitle:'As primeiras lembranças',numeral:'I',letterTitle:'Para você, com carinho.',color:'#525d50'},
  {title:'Capítulo II',subtitle:'Momentos que ficaram',numeral:'II',letterTitle:'O amor mora nos detalhes.',color:'#75604c'},
  {title:'Capítulo III',subtitle:'Risadas e aventuras',numeral:'III',letterTitle:'A alegria de viver ao seu lado.',color:'#65535a'},
- {title:'Capítulo IV',subtitle:'O que ainda vamos viver',numeral:'IV',letterTitle:'Ainda há tanto para florescer.',color:'#4e6263'}
+ {title:'Capítulo IV',subtitle:'A volta por cima',numeral:'IV',letterTitle:'Ainda há tanto para florescer.',color:'#4e6263'}
 ].map((album,a)=>({...album,photos:Array.from({length:PHOTO_COUNTS[a]},(_,i)=>{
  const base=`assets/images/album${a+1}-${String(i+1).padStart(2,'0')}`;
  return {src:base+'.jpg',fallbackVideo:base+'.mp4',caption:`Lembrança ${String(i+1).padStart(2,'0')}`,alt:`Memória ${i+1} — ${album.subtitle}`,...MEDIA_OVERRIDES[`${a+1}-${i+1}`]};
@@ -147,7 +141,7 @@ ALBUMS.forEach((album,index)=>{
  state.finish.setAttribute('aria-label',`Ler a carta ${album.numeral} inteira`);state.finish.addEventListener('click',()=>completeLetter(state));
  chapter.querySelector('.letter-tools a').href=`#album-${index+1}`;chapter.querySelector('.letter-tools a').textContent='Ir para este álbum ↓';state.after.textContent='Agora, abra o álbum e reviva as lembranças deste capítulo.';
  const albumWrap=document.createElement('div');albumWrap.className='chapter-album';albumWrap.id=`album-${index+1}`;
- const prelude=document.createElement('p');prelude.className='album-prelude';prelude.textContent=`${album.photos.length} memórias, um capítulo do nosso amor.`;
+ const prelude=document.createElement('p');prelude.className='album-prelude';prelude.textContent=`${album.photos.length} memórias, um capítulo de amor.`;
  const article=document.createElement('article');article.className='album-card';article.style.setProperty('--album-color',album.color);
  const button=document.createElement('button');button.className='album-cover';button.setAttribute('aria-label',`Abrir ${album.title} — ${album.subtitle}, ${album.photos.length} memórias`);
  const frame=document.createElement('div');frame.className='album-image';const placeholder=document.createElement('span');placeholder.className='placeholder';placeholder.textContent=album.numeral;placeholder.setAttribute('aria-hidden','true');frame.append(placeholder);
